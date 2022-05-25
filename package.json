@@ -1,0 +1,22 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build --public-url '.' src/index.html"
+  },
+  "author": "Jesus Silva",
+  "license": "MIT",
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.10.4",
+    "stats-js": "^1.0.1",
+    "three": "^0.140.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-glsl": "^2.5.0",
+    "glsl-noise": "^0.0.0",
+    "parcel": "^2.5.0"
+  }
+}

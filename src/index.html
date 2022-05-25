@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css" />
+ 
+</head>
+<body>
+  <!--#####################nav#######################-->
+  <header id="nav">
+    <nav class="navbar">
+      <div class="navbar-logo">
+        X
+      </div>
+      <div class="navbar-links">
+        <ul>
+          <li><a>Curriculum</a></li>
+        </ul>
+        <button id="navbar-btn" class=" show-menu">
+          <ion-icon name="grid-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <a class="back-arrow" href="#landing">
+    ^
+  </a>
+
+  <!--#####################decoration#######################-->
+  <div class="side-text">
+    <p>FRONT</p>
+    <p>DEVELOPER</p>
+    <div> </div>
+  </div>
+
+  <div class="square"></div>
+
+  <div class="side-social">
+    <div class="side-social-icon"></div>
+  </div>
+
+
+  <!--#####################sections#######################-->
+  <section id="landing" class="section landing">
+    <div class="landing-content">
+      <span>Hola! me llamo</span>
+      <h1>Jesus Silva.</h1>
+      <p>
+        Soy un desarrollador web imagino, diseño y transformo ideas en codigo. 
+      </p>
+      <div class="landing-box">
+        <a class="box-btn" href="#about">
+          Sombre Mi
+        </a>
+        <a class="box-btn" href="#experience">Experiencia</a>
+        <a class="box-btn" href="#proyects">Proyectos</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="about" class="section about">
+    <div class="about-content">
+      <div class="section-head">
+        <p class="section-num">01</p>
+        <h2>Quien Soy?</h2>
+      </div>
+      <p>
+        Soy un desarrollador frontend junior enfocado en el diseño 
+        y construccion de sitios web que proporcionen la mejor 
+        experiencia y accecibilidad de usuario. 
+      </p>
+      <p>
+        Me gusta apredener nuevas tecnologias que potencien las capacidades de expresion.
+        Actualmente estudiante de ingenieria en sistemas.
+      </p>
+
+      <h3>Estudios</h3>
+      <ul>
+        <li>
+          <strong>Instituto Universitario Politécnico Santiago Mariño</strong>
+          <br>
+          Cursando Grado en ingenieria de sistemas.
+          <br>
+          2018 - 2024
+        </li>
+        <li>
+          <strong>Tecnico Medio Informatica</strong>
+          <br>
+          Técnico Medio en Comercio y Servicios Administrativos Mención Informática
+          <br>
+          jul 2017
+        </li>
+      </ul>
+
+      <p>Tecnologias usadas recientemente:</p>
+      <div class="about-tech">
+        <div class="about-tech-mark">React</div>
+        <div class="about-tech-mark">Next</div>
+        <div class="about-tech-mark">tailwind</div>
+        <div class="about-tech-mark">Three.js</div>
+        <div class="about-tech-mark">Javascript</div>
+        <div class="about-tech-mark">GraphQL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section experience">
+    <div class="section-head">
+      <p class="section-num">02</p>
+      <h2>Experiencia</h2>
+    </div>
+    <div class="experience-content">
+      <div class="jobs">
+        <ul>
+          <li id="exp-1" class="job-list  active">Synergiart</li>
+          <li id="exp-2" class="job-list ">Freelance</li>
+          <li id="exp-3" class="job-list ">Diseño Web</li>
+          <div class="job-list-scroll"></div>
+        </ul>
+      </div>
+      <div class="jobs-info">
+        <div class="jobs-info-content show">
+          <p>a</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyects" class="section proyect">
+    <div class="section-head">
+      <p class="section-num">03</p>
+      <h2>Proyectos</h2>
+    </div>
+    
+    <div class="proyect-content">
+      <div class="proyect-img">
+        <img src="./img/prueba.png" alt="borealis web page">
+      </div>
+      <div class="proyect-info">
+        <h2>Blog Next.js</h2>
+        <p>
+          bloct creado en next que consume un cliente de GraphQL CMS
+          para insertar de manera simple contenido en el blog, 
+          categorias, autores, post relacionados etc...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section proyect">
+    <div class="proyect-content">
+      <div class="proyect-img">
+        <img src="./img/prueba.png" alt="borealis web page">
+      </div>
+      <div class="proyect-info">
+        <h2>App React</h2>
+        <p>
+          Clon de la app giphy en react haciendo consumo de su API.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section proyect">
+    <div class="proyect-content">
+      <div class="proyect-img">
+        <img src="./img/prueba.png" alt="borealis web page">
+      </div>
+      <div class="proyect-info">
+        <h2>Catalogo Dinamico</h2>
+        <p>
+          Oferecer un catalogo web y PDF que actualice sus precios en dolares 
+          dinamicamente conforme la tasa de inflacion de un pais
+
+          Este proyecto procesa una base de datos en exel o archivos cvs
+          enlazando imagenes y informacion para mostrarla ordenadamente
+          en un catalogo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section others">
+    <h2>Otros proyectos</h2>
+    <div class="others-content">
+      <div class="others-content-item">
+        <h3>Water App</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+      
+      <div class="others-content-item">
+        <h3>Desing</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+
+      <div class="others-content-item">
+        <h3>Admin Panel</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+
+      <div class="others-content-item">
+        <h3>Maquetacion</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+
+      <div class="others-content-item">
+        <h3>Porfolio v1</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+
+      <div class="others-content-item">
+        <h3>ContactBook</h3>
+        <p>Este es un proyecto</p>
+        <a href="http://">proyect</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="section-head">
+      <p class="section-num">04</p>
+      <h2>Contactame</h2>
+    </div>
+    <form action="" method="post">
+      <input type="email" name="email" id="email">
+      <input type="text">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div class="canvas">
+    <canvas id="bg"></canvas>
+  </div>
+
+  <!--#####################footer#######################-->
+  <footer>
+    <p>made by Jesus Silva</p>
+  </footer>
+  
+  <script type="module" src="app.js"></script>
+  <script type="module" src="index.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
