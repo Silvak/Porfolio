@@ -17,6 +17,6 @@
   "devDependencies": {
     "@parcel/transformer-glsl": "^2.5.0",
     "glsl-noise": "^0.0.0",
-    "parcel": "^2.5.0"
+    "parcel": "^2.6.0"
   }
 }
