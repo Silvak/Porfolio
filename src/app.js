@@ -18,6 +18,7 @@ const params = {
   bloomRadius: 0
 };
 
+
 //draw fps graph in the DOM
 let stats = new Stats();
 stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
@@ -235,10 +236,6 @@ const render = () => {
 }
 
 render()
-
-
-
-
 
 /*
 const params = {

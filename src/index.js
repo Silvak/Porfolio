@@ -1,4 +1,3 @@
-
 //-----------------
 const info1 = `
   <h3>Synergiart SL - Frontend Developer</h3>
