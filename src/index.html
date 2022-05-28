@@ -14,12 +14,15 @@
   <header id="nav">
     <nav class="navbar">
       <div class="navbar-logo">
-        X
+        <span>SILVAK</span>
       </div>
       <div class="navbar-links">
-          <a class="btn-nav"><b>Curriculum</b></a>
-        <button id="navbar-btn" class=" show-menu">
-          <ion-icon name="grid-outline"></ion-icon>
+        <a class="navbar-links-btn">
+          <b>CURRICULUM</b>
+          <ion-icon name="arrow-down"></ion-icon>
+        </a>
+        <button id="navbar-btn" class="btn-menu show-menu">
+          x
         </button>
       </div>
     </nav>
@@ -27,7 +30,7 @@
 
 
   <a class="back-arrow" href="#landing">
-    ^
+    <ion-icon name="arrow-up"></ion-icon>
   </a>
 
   <!--#####################decoration#######################-->
@@ -53,11 +56,9 @@
         Soy un desarrollador web imagino, diseño y transformo ideas en codigo. 
       </p>
       <div class="landing-box">
-        <a class="box-btn" href="#about">
-          Sombre Mi
-        </a>
-        <a class="box-btn" href="#experience">Experiencia</a>
-        <a class="box-btn" href="#proyects">Proyectos</a>
+        <a class="box-btn" href="#about">SOBRE MI</a>
+        <a class="box-btn" href="#experience">EXPERIENCIA</a>
+        <a class="box-btn" href="#proyects">PROYECTOS</a>
       </div>
     </div>
   </section>
@@ -65,13 +66,11 @@
   <section id="about" class="section about">
     <div class="about-content">
       <div class="section-head">
-        <p class="section-num">01</p>
-        <h2>Quien Soy?</h2>
+        <h2>¿Quien Soy?</h2>
       </div>
       <p>
         Soy un desarrollador frontend junior enfocado en el diseño 
-        y construccion de sitios web que proporcionen la mejor 
-        experiencia y accecibilidad de usuario. 
+        y construccion de sitios web.
       </p>
       <p>
         Me gusta apredener nuevas tecnologias que potencien las capacidades de expresion.
@@ -82,21 +81,18 @@
       <ul>
         <li>
           <strong>Instituto Universitario Politécnico Santiago Mariño</strong>
+          > <span>2018 - 2024</span>
           <br>
           Cursando Grado en ingenieria de sistemas.
           <br>
-          2018 - 2024
         </li>
         <li>
           <strong>Tecnico Medio Informatica</strong>
-          <br>
-          Técnico Medio en Comercio y Servicios Administrativos Mención Informática
-          <br>
-          jul 2017
+          > <span>jul 2017</span>
         </li>
       </ul>
 
-      <p>Tecnologias usadas recientemente:</p>
+      <h3>Tecnologias usadas recientemente:</h3>
       <div class="about-tech">
         <div class="about-tech-mark">React</div>
         <div class="about-tech-mark">Next</div>
@@ -109,11 +105,10 @@
   </section>
 
   <section id="experience" class="section experience">
-    <div class="section-head">
-      <p class="section-num">02</p>
-      <h2>Experiencia</h2>
-    </div>
     <div class="experience-content">
+      <div class="section-head">
+        <h2>Experiencia</h2>
+      </div>
       <div class="jobs">
         <ul>
           <li id="exp-1" class="job-list  active">Synergiart</li>
@@ -133,13 +128,12 @@
 
   <section id="proyects" class="section proyect">
     <div class="section-head">
-      <p class="section-num">03</p>
       <h2>Proyectos</h2>
     </div>
     
     <div class="proyect-content">
       <div class="proyect-img">
-        <img src="./img/prueba.png" alt="borealis web page">
+        <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
       </div>
       <div class="proyect-info">
         <h2>Blog Next.js</h2>
@@ -155,7 +149,7 @@
   <section class="section proyect">
     <div class="proyect-content">
       <div class="proyect-img">
-        <img src="./img/prueba.png" alt="borealis web page">
+        <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
       </div>
       <div class="proyect-info">
         <h2>App React</h2>
@@ -169,7 +163,7 @@
   <section class="section proyect">
     <div class="proyect-content">
       <div class="proyect-img">
-        <img src="./img/prueba.png" alt="borealis web page">
+        <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
       </div>
       <div class="proyect-info">
         <h2>Catalogo Dinamico</h2>
@@ -227,10 +221,7 @@
   </section>
 
   <section id="contact" class="section contact">
-    <div class="section-head">
-      <p class="section-num">04</p>
-      <h2>Contactame</h2>
-    </div>
+    <h2>Contactame</h2>
     <form action="" method="post">
       <input type="email" name="email" id="email">
       <input type="text">
@@ -243,7 +234,7 @@
   </div>
 
   <!--#####################footer#######################-->
-  <footer>
+  <footer class="footer">
     <p>made by Jesus Silva</p>
   </footer>
   
