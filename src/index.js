@@ -1,3 +1,13 @@
+console.log(`
+  Hello visita mi github!  www.github.com/Silvak
+    __
+  <(o )___
+   ( ._> /
+    "---'  
+
+`);
+
+
 //-----------------
 const info1 = `
   <h3>Synergiart SL - Frontend Developer</h3>
@@ -9,12 +19,12 @@ const info1 = `
     <li>configuracion de desplieges CI/CD</li>
   </ul>
   <h4>tecnologias: </h4>
-  <div>
-    <span class="about-tech-mark">Javascript</span>
-    <span class="about-tech-mark">html/css</span> 
-    <span class="about-tech-mark">React</span> 
-    <span class="about-tech-mark">GraphQL</span>
-    <span class="about-tech-mark">Apollo</span>
+  <div class="about-tech">
+    <div class="about-tech-mark">Javascript</div>
+    <div class="about-tech-mark">html/css</div> 
+    <div class="about-tech-mark">React</div> 
+    <div class="about-tech-mark">GraphQL</div>
+    <div class="about-tech-mark">Apollo</div>
   </div>
 `
 
@@ -30,16 +40,16 @@ const info2 = `
     <li>Comunicacion con placas de desarrollo Iot - arduino</li>
   </ul>
   <h4>tecnologias: </h4>
-  <div>
-    <span class="about-tech-mark">Javascript</span>
-    <span class="about-tech-mark">html/css</span> 
-    <span class="about-tech-mark">Sass</span> 
-    <span class="about-tech-mark">Bootstrap</span> 
-    <span class="about-tech-mark">React</span> 
-    <span class="about-tech-mark">Next</span> 
-    <span class="about-tech-mark">Python/Flask</span>
-    <span class="about-tech-mark">Firebase</span>
-    <span class="about-tech-mark">sql</span>  
+  <div class="about-tech">
+    <div class="about-tech-mark">Javascript</div>
+    <div class="about-tech-mark">html/css</div> 
+    <div class="about-tech-mark">Sass</div> 
+    <div class="about-tech-mark">Bootstrap</div> 
+    <div class="about-tech-mark">React</div> 
+    <div class="about-tech-mark">Next</div> 
+    <div class="about-tech-mark">Python/Flask</div>
+    <div class="about-tech-mark">Firebase</div>
+    <div class="about-tech-mark">sql</div>  
   </div>
 `
 const info3 = `
@@ -52,29 +62,14 @@ const info3 = `
     <li>Diseño de wirerames y landing pages</li>
   </ul>
   <h4>tecnologias:</h4>
-  <div>
-    <span class="about-tech-mark">adobe XD</span>
-    <span class="about-tech-mark">figma</span> 
-    <span class="about-tech-mark">illustrator</span> 
-    <span class="about-tech-mark">photoshop</span>  
+  <div class="about-tech">
+    <div class="about-tech-mark">adobe XD</div>
+    <div class="about-tech-mark">figma</div> 
+    <div class="about-tech-mark">illustrator</div> 
+    <div class="about-tech-mark">photoshop</div>  
   </div>
 `
 
-
-
-//------------------------------------------------------
-//menu button handdler event
-let menuBtn = document.querySelector('#navbar-btn');
-menuBtn.addEventListener('click', (e) =>{
-  console.log(menuBtn.classList)
-  if(menuBtn.classList == "show-menu"){
-    menuBtn.classList.remove("show-menu");
-  }else{
-    menuBtn.classList.add("show-menu");
-  }
-})
-
- 
 //------------------------------------------------------
 //Jobs menu
 let jobsList = document.querySelector('.jobs ul');
@@ -109,22 +104,45 @@ jobsList.addEventListener('click', (e)=>{
 
 
 
-//----------------------------------------------
+//------------------------------------------------------
+//menu button handdler event
 let nav = document.querySelector('#nav');
+let backArrow = document.querySelector('#back-arrow');
 let scrollY = window.scrollY;
+
+
+let menuBtn = document.querySelector('#navbar-btn');
+let navdrop = document.querySelector('.nav-menu');
+
+menuBtn.addEventListener('click', (e) =>{
+  if(navdrop.classList[1]){
+    navdrop.classList.remove("show-menu");
+  }else{
+    navdrop.classList.add("show-menu");
+  }
+})
+
 
 window.addEventListener('scroll', () =>
 {
     //nav hidden scroll
-    if(scrollY > 10){
+    if(scrollY > 10 && !navdrop.classList[1]){
       nav.classList.add("hide-nav");
     }else{
       nav.classList.remove("hide-nav");
     }
-    if(scrollY >  window.scrollY){
+    if(scrollY >  window.scrollY && !navdrop.classList[1]){
       nav.classList.remove("hide-nav");
+    }
+
+    //back-arrow
+    if(scrollY > 800){
+      backArrow.classList.remove("hide-back-arrow");
+    }else{
+      backArrow.classList.add("hide-back-arrow");
     }
 
     //set scroll y position
     scrollY = window.scrollY
 })
+

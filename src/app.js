@@ -1,23 +1,21 @@
 import * as THREE from 'three';
-import vertexSphere from "./glsl/sphere.vert";
-import fragmentSphere from "./glsl/sphere.frag";
 import Stats from 'stats-js';
 import "./style.css";
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 //bloom
+/*
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-
+*/
 
 const objectSpacing = 6;
 const params = {
   exposure: 1,
-  bloomStrength: 2.5,
+  bloomStrength: 1.5,
   bloomThreshold: 0,
   bloomRadius: 0
 };
-
 
 //draw fps graph in the DOM
 let stats = new Stats();
@@ -30,11 +28,9 @@ const scene = new THREE.Scene();
 //scene.background = new THREE.Color('#18113b');//<<<<<<<<<<<<<<<<<<<<<<<<
 const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 8;
-
 const cameraGroup = new THREE.Group();
 scene.add(cameraGroup);
 cameraGroup.add(camera);
-
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
   antialias: true,
@@ -45,30 +41,53 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.toneMappingExposure = Math.pow(params.exposure, 4.0);
 //renderer.setClearColor(0x000000);
 
+//-----------------------------------boom light-----------------------------------------
+// LIGHT
+scene.add(new THREE.AmbientLight('#18113b', 1));//#fc4c39 #8787ff
+const light = new THREE.PointLight('#ffffff', 0.8);
+light.position.set(20, 20, 20);
+scene.add(light);
+
+/*
+//bloom
+const renderScene = new RenderPass( scene, camera );
+const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+bloomPass.threshold = params.bloomThreshold;
+bloomPass.strength = params.bloomStrength;
+bloomPass.radius = params.bloomRadius;
+
+let composer = new EffectComposer( renderer );
+//composer.renderToScreen = false;
+composer.addPass( renderScene );
+composer.addPass( bloomPass );
+*/
+
 //-------------------------------------scene-----------------------------------
 //OBJ Sphere 
-const sphereMat = new THREE.ShaderMaterial({
-  uniforms: {
-    uTime: { value: 0 },
-    uSpeed: { value: 0.002 },
-    uNoiseDensity: { value: 3.6},
-    uNoiseStrength: { value: 0.78},
-    uFrequency: { value: 0.94 }, //
-    uAmplitude: { value: 10.3 }, //rotation effect
-    uIntensity: { value: 1.6}, //line intensity
-  },
-  vertexShader: vertexSphere,
-  fragmentShader: fragmentSphere,
-  wireframe: false
-});
-const sphere = new THREE.Mesh(
-  new THREE.IcosahedronBufferGeometry(1.8, 32), //2,60  o 1.6, 40
-  sphereMat
-);
-scene.add(sphere); 
-sphere.position.y = - objectSpacing * 0.02;
-sphere.position.x = 1.8;
+const groupPlanet = new THREE.Object3D();
 
+const plannet = new THREE.Mesh(
+  new THREE.IcosahedronBufferGeometry(1.2, 10), //2,60  o 1.6, 40
+  new THREE.MeshStandardMaterial({color:'#ffffff', wireframe: false})
+);
+const sphere = new THREE.Mesh(
+  new THREE.IcosahedronBufferGeometry(1.8, 1), //2,60  o 1.6, 40
+  new THREE.MeshStandardMaterial({color:'#00f48a', wireframe: true})
+);
+
+const sateliteOrbit = new THREE.Object3D();
+const satelite = new THREE.Mesh(
+  new THREE.IcosahedronBufferGeometry(0.08, 2), //2,60  o 1.6, 40
+  new THREE.MeshStandardMaterial({color:'#cfcfcf', wireframe:false})
+);
+satelite.position.set(0,0,2);
+sateliteOrbit.add(satelite);
+
+groupPlanet.position.x = 1.8;
+groupPlanet.add(sphere);
+groupPlanet.add(plannet);
+groupPlanet.add(sateliteOrbit);
+scene.add(groupPlanet);
 
 //obj mesh Octaedro
 const octa = new THREE.Mesh(
@@ -93,7 +112,7 @@ const constelation = new THREE.Object3D()
 
 
 //load OBJ model
-const modelURL = new URL('./models/a.obj', import.meta.url);
+const modelURL = new URL('./models/asteroid.obj', import.meta.url);
 let ObjFace;
 
 const loader = new  OBJLoader();
@@ -107,47 +126,30 @@ loader.load(
     ObjFace.position.x = -1.6;
     ObjFace.position.z = 0;
     ObjFace.rotation.y = 0.50;
-    ObjFace.scale.set(0.02,0.02,0.02);
+    //ObjFace.scale.set(0.024,0.024,0.024);
+    ObjFace.scale.set(0.6,0.6,0.6);
     ObjFace.traverse(function(child) {
-      if (child instanceof THREE.MeshStandardMaterial) {
-          child.wireframe = true
+
+      if (child.isMesh) {
+        //child.material.side = false;
+        child.material.wireframe = false;
+        child.material.color = "#ff2"
+        console.log(child);
       }
-    });
+  })
 
 		scene.add(ObjFace);
-    console.log("modelo face cargado!")
+    //console.log("modelo cargado!")
 	},
 	// called while loading is progressing
 	function ( xhr ) {
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+		//console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 	},
 	// called when loading has errors
 	function ( error ) {
 		console.log(error);
 	}
 );
-
-
-
-// LIGHT
-const light = new THREE.AmbientLight('#8787ff', 1);//#fc4c39 #8787ff
-scene.add(light);
-const pointLight = new THREE.PointLight('#fc4c39', 1);
-pointLight.position.set(20, 20, 20);
-scene.add(pointLight);
-
-//---------------------------------------------------------------------------------
-//bloom
-const renderScene = new RenderPass( scene, camera );
-const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
-bloomPass.threshold = params.bloomThreshold;
-bloomPass.strength = params.bloomStrength;
-bloomPass.radius = params.bloomRadius;
-
-let composer = new EffectComposer( renderer );
-//composer.renderToScreen = false;
-composer.addPass( renderScene );
-composer.addPass( bloomPass );
 
 
 //------------------------------------events----------------------------------
@@ -213,7 +215,10 @@ const render = () => {
     */
 
     //animated
-    sphereMat.uniforms.uTime.value++;
+    sateliteOrbit.rotation.y += 0.02;
+    groupPlanet.rotation.z += 0.01;
+    groupPlanet.rotation.x += 0.01;
+    groupPlanet.position.y = - objectSpacing * 0.03 +  Math.cos( elapsedTime ) * 0.14;
     octa.position.y = - objectSpacing * 2 +  Math.cos( elapsedTime ) * 0.14;
     //objs.rotation.x = 2;
     //scroll camera
@@ -225,7 +230,6 @@ const render = () => {
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
 
 
-   
     //render bloom past 
     //composer.render();
 
@@ -236,12 +240,3 @@ const render = () => {
 }
 
 render()
-
-/*
-const params = {
-  exposure: 1,
-  bloomStrength: 1.5,
-  bloomThreshold: 0,
-  bloomRadius: 0
-};
-*/

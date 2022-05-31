@@ -14,22 +14,26 @@
   <header id="nav">
     <nav class="navbar">
       <div class="navbar-logo">
-        <span>SILVAK</span>
+        <ion-icon name="terminal-outline"></ion-icon>
       </div>
       <div class="navbar-links">
         <a class="navbar-links-btn">
           <b>CURRICULUM</b>
           <ion-icon name="arrow-down"></ion-icon>
         </a>
-        <button id="navbar-btn" class="btn-menu show-menu">
-          x
+        <button id="navbar-btn" class="btn-menu">
+          <ion-icon name="menu-outline"></ion-icon>
         </button>
       </div>
     </nav>
   </header>
 
-
-  <a class="back-arrow" href="#landing">
+  <!--DROP-MENU-->
+  <div class="nav-menu">
+    <a>ddssadas</a>
+  </div>
+  <!--BACK-ARROW-->
+  <a id="back-arrow" class="hide-back-arrow" href="#landing">
     <ion-icon name="arrow-up"></ion-icon>
   </a>
 
@@ -119,7 +123,6 @@
       </div>
       <div class="jobs-info">
         <div class="jobs-info-content show">
-          <p>a</p>
         </div>
         </div>
       </div>
@@ -221,23 +224,18 @@
   </section>
 
   <section id="contact" class="section contact">
-    <h2>Contactame</h2>
-    <form action="" method="post">
-      <input type="email" name="email" id="email">
-      <input type="text">
-      <button type="submit">Enviar</button>
-    </form>
+    <h2>Enviame un mensaje!</h2>
+    <a class="box-btn" href="mailto:silvak.jeg@gmail.com">Enviar</a>
+
+    <footer class="footer">
+      <p>made by Jesus Silva</p>
+    </footer>
   </section>
 
   <div class="canvas">
     <canvas id="bg"></canvas>
   </div>
 
-  <!--#####################footer#######################-->
-  <footer class="footer">
-    <p>made by Jesus Silva</p>
-  </footer>
-  
   <script type="module" src="./app.js"></script>
   <script type="module" src="./index.js"></script>
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
