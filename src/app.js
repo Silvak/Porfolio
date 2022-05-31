@@ -112,7 +112,7 @@ const constelation = new THREE.Object3D()
 
 
 //load OBJ model
-const modelURL = new URL('./models/asteroid.obj', import.meta.url);
+const modelURL = new URL('./models/face.obj', import.meta.url);
 let ObjFace;
 
 const loader = new  OBJLoader();
@@ -126,15 +126,15 @@ loader.load(
     ObjFace.position.x = -1.6;
     ObjFace.position.z = 0;
     ObjFace.rotation.y = 0.50;
-    //ObjFace.scale.set(0.024,0.024,0.024);
-    ObjFace.scale.set(0.6,0.6,0.6);
+    ObjFace.scale.set(0.024,0.024,0.024);
+    //ObjFace.scale.set(0.6,0.6,0.6);
     ObjFace.traverse(function(child) {
 
       if (child.isMesh) {
         //child.material.side = false;
-        child.material.wireframe = false;
-        child.material.color = "#ff2"
-        console.log(child);
+        child.material.wireframe = true;
+        //child.material.color = "#ff2"
+        //console.log(child);
       }
   })
 

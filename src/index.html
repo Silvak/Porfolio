@@ -7,14 +7,14 @@
   <title>Porfolio</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./normalize.css" />
- 
+  <link rel="shortcut icon" href="./img/favicon.icon" type="image/x-icon">
 </head>
 <body>
   <!--#####################nav#######################-->
   <header id="nav">
     <nav class="navbar">
       <div class="navbar-logo">
-        <ion-icon name="terminal-outline"></ion-icon>
+        <img src="./img/logo.png" alt="letra S logo" width="40px">
       </div>
       <div class="navbar-links">
         <a class="navbar-links-btn">
@@ -27,7 +27,6 @@
       </div>
     </nav>
   </header>
-
   <!--DROP-MENU-->
   <div class="nav-menu">
     <a>ddssadas</a>
@@ -43,9 +42,7 @@
     <p>DEVELOPER</p>
     <div> </div>
   </div>
-
   <div class="square"></div>
-
   <div class="side-social">
     <div class="side-social-icon"></div>
   </div>
@@ -67,6 +64,7 @@
     </div>
   </section>
   
+  <!--#####################land#######################-->
   <section id="about" class="section about">
     <div class="about-content">
       <div class="section-head">
@@ -80,7 +78,6 @@
         Me gusta apredener nuevas tecnologias que potencien las capacidades de expresion.
         Actualmente estudiante de ingenieria en sistemas.
       </p>
-
       <h3>Estudios</h3>
       <ul>
         <li>
@@ -95,7 +92,6 @@
           > <span>jul 2017</span>
         </li>
       </ul>
-
       <h3>Tecnologias usadas recientemente:</h3>
       <div class="about-tech">
         <div class="about-tech-mark">React</div>
@@ -108,6 +104,7 @@
     </div>
   </section>
 
+  <!--#####################about#######################-->
   <section id="experience" class="section experience">
     <div class="experience-content">
       <div class="section-head">
@@ -129,11 +126,11 @@
     </div>
   </section>
 
+
   <section id="proyects" class="section proyect">
     <div class="section-head">
       <h2>Proyectos</h2>
     </div>
-    
     <div class="proyect-content">
       <div class="proyect-img">
         <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
@@ -149,6 +146,7 @@
     </div>
   </section>
 
+  <!--#####################projects#######################-->
   <section class="section proyect">
     <div class="proyect-content">
       <div class="proyect-img">
@@ -163,6 +161,7 @@
     </div>
   </section>
 
+  
   <section class="section proyect">
     <div class="proyect-content">
       <div class="proyect-img">
@@ -173,7 +172,6 @@
         <p>
           Oferecer un catalogo web y PDF que actualice sus precios en dolares 
           dinamicamente conforme la tasa de inflacion de un pais
-
           Este proyecto procesa una base de datos en exel o archivos cvs
           enlazando imagenes y informacion para mostrarla ordenadamente
           en un catalogo.
@@ -182,6 +180,7 @@
     </div>
   </section>
 
+  <!--#####################others#######################-->
   <section class="section others">
     <h2>Otros proyectos</h2>
     <div class="others-content">
@@ -190,7 +189,7 @@
         <p>Este es un proyecto</p>
         <a href="http://">proyect</a>
       </div>
-      
+
       <div class="others-content-item">
         <h3>Desing</h3>
         <p>Este es un proyecto</p>
@@ -223,19 +222,47 @@
     </div>
   </section>
 
+  <!--#####################contact#######################-->
   <section id="contact" class="section contact">
     <h2>Enviame un mensaje!</h2>
-    <a class="box-btn" href="mailto:silvak.jeg@gmail.com">Enviar</a>
-
+    <form class="contact-form">
+      <div class="contact-form-input">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+      </div>
+      <div class="contact-form-input">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+      </div>
+      <div class="contact-form-textarea">
+        <label for="message">Mensaje</label>
+        <textarea 
+          name="message"  
+          maxlength="220" 
+          id="message" 
+          rows="2" 
+          placeholder="Hola! Necesito llevar a cabo un proyecto para X compañia!"
+        ></textarea>
+      </div>
+      <!-- href="mailto:silvak.jeg@gmail.com" -->
+      <div class="contact-form-button">
+        <button class="form-btn" type="submit">Enviar</button> 
+        <p class="form-alert">2</p>
+      </div>
+    </form>
+    
     <footer class="footer">
       <p>made by Jesus Silva</p>
     </footer>
   </section>
 
+
+  <!--#####################bg-canvas#######################-->
   <div class="canvas">
     <canvas id="bg"></canvas>
   </div>
 
+  
   <script type="module" src="./app.js"></script>
   <script type="module" src="./index.js"></script>
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
