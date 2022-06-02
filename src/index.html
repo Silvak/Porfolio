@@ -14,15 +14,35 @@
   <header id="nav">
     <nav class="navbar">
       <div class="navbar-logo">
-        <img src="./img/logo.png" alt="letra S logo" width="40px">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-codesandbox" width="16" height="16" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25z"></path>
+          <path d="M12 12l4 -2.25l4 -2.25"></path>
+          <line x1="12" y1="12" x2="12" y2="21"></line>
+          <path d="M12 12l-4 -2.25l-4 -2.25"></path>
+          <path d="M20 12l-4 2v4.75"></path>
+          <path d="M4 12l4 2l0 4.75"></path>
+          <path d="M8 5.25l4 2.25l4 -2.25"></path>
+        </svg>
       </div>
       <div class="navbar-links">
-        <a class="navbar-links-btn">
+        <a class="navbar-links-btn" href="./donwload/cv.pdf" download="cv_jesus_silva_2022">
           <b>CURRICULUM</b>
-          <ion-icon name="arrow-down"></ion-icon>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-down" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="18" y1="13" x2="12" y2="19"></line>
+            <line x1="6" y1="13" x2="12" y2="19"></line>
+         </svg>
         </a>
         <button id="navbar-btn" class="btn-menu">
-          <ion-icon name="menu-outline"></ion-icon>
+          <div class="cube">
+             <div class="cube-top-l"></div> 
+             <div class="cube-top-r"></div> 
+             <div class="cube-bot-l"></div>
+             <div class="cube-bot-r"></div>  
+          </div>
+          <div></div>
         </button>
       </div>
     </nav>
@@ -33,7 +53,12 @@
   </div>
   <!--BACK-ARROW-->
   <a id="back-arrow" class="hide-back-arrow" href="#landing">
-    <ion-icon name="arrow-up"></ion-icon>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <desc>Download more icon variants from https://tabler-icons.io/i/arrow-up</desc>
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="18" y1="11" x2="12" y2="5"></line>
+      <line x1="6" y1="11" x2="12" y2="5"></line>
+    </svg>
   </a>
 
   <!--#####################decoration#######################-->
@@ -136,7 +161,7 @@
         <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
       </div>
       <div class="proyect-info">
-        <h2>Blog Next.js</h2>
+        <h2>Dashboard</h2>
         <p>
           bloct creado en next que consume un cliente de GraphQL CMS
           para insertar de manera simple contenido en el blog, 
@@ -153,7 +178,7 @@
         <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
       </div>
       <div class="proyect-info">
-        <h2>App React</h2>
+        <h2>Blog Next.js</h2>
         <p>
           Clon de la app giphy en react haciendo consumo de su API.
         </p>
@@ -184,55 +209,137 @@
   <section class="section others">
     <h2>Otros proyectos</h2>
     <div class="others-content">
-      <div class="others-content-item">
-        <h3>Water App</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
+
+      <div class="others-content-card">
+        <div class="others-content-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="16" height="16" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+          </svg>
+        </div>
+        <div class="others-content-card-text">
+          <h3>Water App</h3>
+          <p>Get data sobre clima desdes una API y la muestra como un dashboard</p>
+          <div class="others-content-item-tech">
+            <p>CSS</p>
+            <p>Javascript</p>
+            <p>HTML</p>
+          </div>
+          <a href="http://">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+              <line x1="10" y1="14" x2="20" y2="4"></line>
+              <polyline points="15 4 20 4 20 9"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div class="others-content-item">
-        <h3>Desing</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
+
+      <div class="others-content-card">
+        <div class="others-content-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="16" height="16" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+          </svg>
+        </div>
+        <div class="others-content-card-text">
+          <h3>Giphy Clone</h3>
+          <p>Un clone de gify consumiendo su API para hacer muestras y busquedas de gift</p>
+          <div class="others-content-item-tech">
+            <p>CSS</p>
+            <p>HTML</p>
+            <p>Reac.js</p>
+            <p>Javascript</p>
+          </div>
+          <a href="http://">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+              <line x1="10" y1="14" x2="20" y2="4"></line>
+              <polyline points="15 4 20 4 20 9"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div class="others-content-item">
-        <h3>Admin Panel</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
+
+      <div class="others-content-card">
+        <div class="others-content-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="16" height="16" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+          </svg>
+        </div>
+        <div class="others-content-card-text">
+          <h3>API Capybara</h3>
+          <p>Api de servicios que brinda una descricion y detalle de capibaras en pixel art</p>
+          <div class="others-content-item-tech">
+            <p>Node</p>
+            <p>Javascript</p>
+            <p>Npm</p>
+          </div>
+          <a href="http://">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+              <line x1="10" y1="14" x2="20" y2="4"></line>
+              <polyline points="15 4 20 4 20 9"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div class="others-content-item">
-        <h3>Maquetacion</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
+
+      <div class="others-content-card">
+        <div class="others-content-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="16" height="16" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+          </svg>
+        </div>
+        <div class="others-content-card-text">
+          <h3>Design Landing Page</h3>
+          <p>Diseño de landing pages, branding e ilustracion</p>
+          <div class="others-content-item-tech">
+            <p>Figma</p>
+            <p>Adobe XD</p>
+            <p>Illustrator</p>
+            <p>Photoshop</p>
+          </div>
+          <a href="http://">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+              <line x1="10" y1="14" x2="20" y2="4"></line>
+              <polyline points="15 4 20 4 20 9"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div class="others-content-item">
-        <h3>Porfolio v1</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
-      </div>
+      
 
-      <div class="others-content-item">
-        <h3>ContactBook</h3>
-        <p>Este es un proyecto</p>
-        <a href="http://">proyect</a>
-      </div>
+
+
     </div>
   </section>
 
   <!--#####################contact#######################-->
-  <section id="contact" class="section contact">
-    <h2>Enviame un mensaje!</h2>
-    <form class="contact-form">
+  <section id="contact" class="section contact" >
+    
+    <form id="form" class="contact-form" method="POST" action="https://formspree.io/f/moqrrzav">
+      <div class="contact-form-title">
+        <h2>Contactame!</h2>
+      </div>
       <div class="contact-form-input">
         <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
       </div>
       <div class="contact-form-input">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+        <input type="email" name="email" id="email" placeholder="Ingresa tu email" required>
       </div>
       <div class="contact-form-textarea">
         <label for="message">Mensaje</label>
@@ -241,30 +348,28 @@
           maxlength="220" 
           id="message" 
           rows="2" 
-          placeholder="Hola! Necesito llevar a cabo un proyecto para X compañia!"
+          placeholder="Hola! necesito una web con X estilo..."
+          required
         ></textarea>
       </div>
-      <!-- href="mailto:silvak.jeg@gmail.com" -->
       <div class="contact-form-button">
         <button class="form-btn" type="submit">Enviar</button> 
-        <p class="form-alert">2</p>
+        <p class="form-alert"></p>
       </div>
     </form>
-    
-    <footer class="footer">
-      <p>made by Jesus Silva</p>
-    </footer>
   </section>
+
+  <footer class="footer">
+    <p>© Jesus Silva 2022</p>
+  </footer>
 
 
   <!--#####################bg-canvas#######################-->
   <div class="canvas">
     <canvas id="bg"></canvas>
   </div>
-
   
   <script type="module" src="./app.js"></script>
   <script type="module" src="./index.js"></script>
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

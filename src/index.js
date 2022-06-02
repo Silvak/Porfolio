@@ -1,10 +1,18 @@
 console.log(`
-  Hello visita mi github!  www.github.com/Silvak
-    __
-  <(o )___
-   ( ._> /
-    "---'  
+    __          __
+  <(o )___    <(o )___   
+ _ ( ._> /     ( ._> /
+    "---'   _   "---'   _
+      -
+  Holla!
+  Si te gusta este sitio puedes ver el codigo aqui 🚀
+  ▷ https://github.com/Silvak/porfolio
 
+  Tambien puedes contactarme en linkedin o via email 
+  ▷ https://www.linkedin.com/in/jesus-e-silva 
+  ▷ silvak.jeg@gmail.com
+
+  
 `);
 
 
@@ -83,7 +91,6 @@ jobsList.addEventListener('click', (e)=>{
       jobsList.children[index].classList.remove("active");
     }
   }
-  
   switch (e.target.id) {
     case "exp-1":
       jobsInfo.innerHTML = info1;
@@ -98,10 +105,8 @@ jobsList.addEventListener('click', (e)=>{
       jobsInfo.innerHTML = info1;
       break;
   }
-
   e.target.classList.add("active")
 })
-
 
 
 //------------------------------------------------------
@@ -109,8 +114,6 @@ jobsList.addEventListener('click', (e)=>{
 let nav = document.querySelector('#nav');
 let backArrow = document.querySelector('#back-arrow');
 let scrollY = window.scrollY;
-
-
 let menuBtn = document.querySelector('#navbar-btn');
 let navdrop = document.querySelector('.nav-menu');
 
@@ -146,3 +149,36 @@ window.addEventListener('scroll', () =>
     scrollY = window.scrollY
 })
 
+
+
+/*------------------EMAIL-------------------*/
+const form = document.querySelector(".contact-form");
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  var status = document.querySelector(".form-alert");
+  var data = new FormData(e.target);
+  fetch(e.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Mensaje enviado exitosamente!";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! Ocurrio un problema"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! Ocurrio un problema al enviar el formulario."
+  });
+}
+form.addEventListener("submit", handleSubmit)

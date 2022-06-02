@@ -43,8 +43,8 @@ renderer.toneMappingExposure = Math.pow(params.exposure, 4.0);
 
 //-----------------------------------boom light-----------------------------------------
 // LIGHT
-scene.add(new THREE.AmbientLight('#18113b', 1));//#fc4c39 #8787ff
-const light = new THREE.PointLight('#ffffff', 0.8);
+scene.add(new THREE.AmbientLight('#080D19', 1));//#fc4c39 #8787ff
+const light = new THREE.PointLight('#FF4343', .78);
 light.position.set(20, 20, 20);
 scene.add(light);
 
@@ -72,13 +72,13 @@ const plannet = new THREE.Mesh(
 );
 const sphere = new THREE.Mesh(
   new THREE.IcosahedronBufferGeometry(1.8, 1), //2,60  o 1.6, 40
-  new THREE.MeshStandardMaterial({color:'#00f48a', wireframe: true})
+  new THREE.MeshStandardMaterial({color:'#83f381', wireframe: true})
 );
 
 const sateliteOrbit = new THREE.Object3D();
 const satelite = new THREE.Mesh(
   new THREE.IcosahedronBufferGeometry(0.08, 2), //2,60  o 1.6, 40
-  new THREE.MeshStandardMaterial({color:'#cfcfcf', wireframe:false})
+  new THREE.MeshStandardMaterial({color:'#03DAC6', wireframe:false})
 );
 satelite.position.set(0,0,2);
 sateliteOrbit.add(satelite);
@@ -123,7 +123,7 @@ loader.load(
 	function ( obj ) {
     ObjFace = obj;
     ObjFace.position.y= - objectSpacing * 1;
-    ObjFace.position.x = -1.6;
+    ObjFace.position.x = -2.2;
     ObjFace.position.z = 0;
     ObjFace.rotation.y = 0.50;
     ObjFace.scale.set(0.024,0.024,0.024);
