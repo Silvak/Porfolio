@@ -72,7 +72,7 @@ const plannet = new THREE.Mesh(
 );
 const sphere = new THREE.Mesh(
   new THREE.IcosahedronBufferGeometry(1.8, 1), //2,60  o 1.6, 40
-  new THREE.MeshStandardMaterial({color:'#83f381', wireframe: true})
+  new THREE.MeshStandardMaterial({color:'#4831d4', wireframe: true})
 );
 
 const sateliteOrbit = new THREE.Object3D();

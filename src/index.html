@@ -35,12 +35,16 @@
             <line x1="6" y1="13" x2="12" y2="19"></line>
          </svg>
         </a>
-        <button id="navbar-btn" class="btn-menu">
+        <!--<button id="navbar-btn" class="btn-menu">-->
+        <button class="btn-menu">
           <div class="cube">
              <div class="cube-top-l"></div> 
              <div class="cube-top-r"></div> 
              <div class="cube-bot-l"></div>
-             <div class="cube-bot-r"></div>  
+             <div class="cube-bot-r"></div>
+             <div class="nav-menu">
+              <a>ddssadas</a>
+             </div>  
           </div>
           <div></div>
         </button>
@@ -48,9 +52,7 @@
     </nav>
   </header>
   <!--DROP-MENU-->
-  <div class="nav-menu">
-    <a>ddssadas</a>
-  </div>
+  
   <!--BACK-ARROW-->
   <a id="back-arrow" class="hide-back-arrow" href="#landing">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -153,9 +155,8 @@
 
 
   <section id="proyects" class="section proyect">
-    <div class="section-head">
-      <h2>Proyectos</h2>
-    </div>
+    <h2>Proyectos Destacados</h2>
+
     <div class="proyect-content">
       <div class="proyect-img">
         <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
@@ -163,31 +164,30 @@
       <div class="proyect-info">
         <h2>Dashboard</h2>
         <p>
-          bloct creado en next que consume un cliente de GraphQL CMS
+          blog creado en next que consume un cliente de GraphQL CMS
           para insertar de manera simple contenido en el blog, 
           categorias, autores, post relacionados etc...
         </p>
+        <div class="about-tech proyect-info-tech">
+          <div class="about-tech-mark">React</div>
+          <div class="about-tech-mark">Next</div>
+          <div class="about-tech-mark">Javascript</div>
+          <div class="about-tech-mark">GraphQL</div>
+        </div>
+        <a class="proyect-info-link" href="http://">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+            <line x1="10" y1="14" x2="20" y2="4"></line>
+            <polyline points="15 4 20 4 20 9"></polyline>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!--#####################projects#######################-->
-  <section class="section proyect">
-    <div class="proyect-content">
-      <div class="proyect-img">
-        <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
-      </div>
-      <div class="proyect-info">
-        <h2>Blog Next.js</h2>
-        <p>
-          Clon de la app giphy en react haciendo consumo de su API.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  
-  <section class="section proyect">
+  <section id="proyects" class="section proyect">
     <div class="proyect-content">
       <div class="proyect-img">
         <img src="./img/prueba.png" alt="borealis web page" loading="lazy">
@@ -201,9 +201,24 @@
           enlazando imagenes y informacion para mostrarla ordenadamente
           en un catalogo.
         </p>
+        <div class="about-tech proyect-info-tech">
+          <div class="about-tech-mark">Flask/Python</div>
+          <div class="about-tech-mark">Javascript</div>
+          <div class="about-tech-mark">CSS</div>
+          <div class="about-tech-mark">Exel</div>
+        </div>
+        <a class="proyect-info-link" href="http://">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+            <line x1="10" y1="14" x2="20" y2="4"></line>
+            <polyline points="15 4 20 4 20 9"></polyline>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
+
 
   <!--#####################others#######################-->
   <section class="section others">
@@ -218,12 +233,13 @@
           </svg>
         </div>
         <div class="others-content-card-text">
-          <h3>Water App</h3>
+          <h3>Blog Borealis</h3>
           <p>Get data sobre clima desdes una API y la muestra como un dashboard</p>
           <div class="others-content-item-tech">
-            <p>CSS</p>
+            <p>Nexts.js</p>
             <p>Javascript</p>
-            <p>HTML</p>
+            <p>tailwind</p>
+            <p>GraphQL</p>
           </div>
           <a href="http://">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

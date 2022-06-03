@@ -26,14 +26,6 @@ const info1 = `
     <li>Implementacion de wireframes y responsive</li>
     <li>configuracion de desplieges CI/CD</li>
   </ul>
-  <h4>tecnologias: </h4>
-  <div class="about-tech">
-    <div class="about-tech-mark">Javascript</div>
-    <div class="about-tech-mark">html/css</div> 
-    <div class="about-tech-mark">React</div> 
-    <div class="about-tech-mark">GraphQL</div>
-    <div class="about-tech-mark">Apollo</div>
-  </div>
 `
 
 const info2 = `
@@ -47,18 +39,6 @@ const info2 = `
     <li>Mantenimiento de webs</li>
     <li>Comunicacion con placas de desarrollo Iot - arduino</li>
   </ul>
-  <h4>tecnologias: </h4>
-  <div class="about-tech">
-    <div class="about-tech-mark">Javascript</div>
-    <div class="about-tech-mark">html/css</div> 
-    <div class="about-tech-mark">Sass</div> 
-    <div class="about-tech-mark">Bootstrap</div> 
-    <div class="about-tech-mark">React</div> 
-    <div class="about-tech-mark">Next</div> 
-    <div class="about-tech-mark">Python/Flask</div>
-    <div class="about-tech-mark">Firebase</div>
-    <div class="about-tech-mark">sql</div>  
-  </div>
 `
 const info3 = `
   <h3>Freelance - Diseño enfocado a web</h3>
@@ -69,13 +49,6 @@ const info3 = `
     <li>Creacion de Marca y aplicacion de Mockup</li>
     <li>Diseño de wirerames y landing pages</li>
   </ul>
-  <h4>tecnologias:</h4>
-  <div class="about-tech">
-    <div class="about-tech-mark">adobe XD</div>
-    <div class="about-tech-mark">figma</div> 
-    <div class="about-tech-mark">illustrator</div> 
-    <div class="about-tech-mark">photoshop</div>  
-  </div>
 `
 
 //------------------------------------------------------

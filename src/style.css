@@ -3,14 +3,14 @@
     /*font size*/
     --side-spacing: 10%;
     --font-res: 1vmax;
-    --font-sm: 1.1em;
+    --font-sm: 1.1em; 
     --font-md: 1.3em;
     --font-lg: 3.8em;
     --font-xl: 4.4em;
 
     --border-color: #524676b9;
     --line-color: #7f4cd885;
-    --nav-color: #080D1999;
+    --nav-color: #080D1988;
     --nav-shadow: #07041596;
     
     /*colors*/
@@ -60,7 +60,7 @@ body{
     max-height: 100vh;
     margin: 0 var(--side-spacing);
     z-index: 1;
-    border-bottom: 1px solid var(--border-color);
+    /*border-bottom: 1px solid var(--border-color);*/
 }
 .section-head{
     display: flex;
@@ -215,6 +215,7 @@ header{
     position: relative;
     width: 24px;
     height: 24px;
+    z-index: 10;
 }
 .hide-nav{
     top: -68px;
@@ -274,6 +275,27 @@ header{
 }
 
 
+.nav-menu{
+    position: absolute;
+    top: -8;
+    right: -8;
+    z-index: -1;
+    background-color: var(--bg-color-card);
+    width: 0em;
+    height: 0em;
+    transition: .4 ease-in-out;
+    overflow: hidden;
+    padding: 0;
+}
+.show-menu{
+    position: absolute;
+    width: 22em;
+    height: 28em;
+    transition: .4 ease-in-out;
+    padding: 2em;
+}
+
+
 /* button navbar */
 .navbar-links-btn{
     display: flex;
@@ -315,28 +337,6 @@ header{
   }
 }
 
-
-/*drop-menu*/
-.nav-menu{
-    position: fixed;
-    top: 69px;
-    right: calc(-10% - 68px);
-    height: 100%;
-    width: calc(10% + 68px);
-    z-index: 998;
-    background: var(--bg-color);
-    transition: .2s ease-in-out;
-    overflow: hidden;
-    backdrop-filter: blur(4px);
-    text-align: end;
-}
-.show-menu{
-    position: fixed;
-    top: 69px;
-    right: 0;
-    width: calc(10% + 68px);
-    height: 100%;
-}
 
 
 /*---------------------------landing-----------------------------*/
@@ -461,42 +461,48 @@ header{
 .experience-content  > .section-head >h2{
     margin-bottom: 1em;
     margin-right: 0;
+    margin-left: 6%;
 }
 .jobs{
     position: relative;
-    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    height: fit-content;
 }
 .job-list{
-    padding: 1em 1.2em;
+    height: 58px;
+    padding:0 2em;
     color: var(--text-color);
     cursor: pointer;
+    line-height: 58px;
+    text-align: center;
     font-size: var(--font-sm);
 }
 .active{
     color: var(--light-color);
     transition: .4s ease-in-out;
-    background-color: #5d4c9672;
+    background: var(--bg-color-card);
+    border-radius: 4px;
 }
 .job-list-scroll{
     position: absolute;
     top: 0px;
-    left: 0px;
+    right: 0px;
     background: var(--light-color);
+    border-radius: 2px;
     width: 4px;
-    height:  4.4em;
+    height: 58px;
     transition: .3s ease-in-out;
 }
 li.active:nth-child(1) ~ .job-list-scroll{
-    top: 0em;
+    top: 0px;
 }
 li.active:nth-child(2) ~ .job-list-scroll{
-    top: 4.4em;
+    top: 58px;
 }
 li.active:nth-child(3) ~ .job-list-scroll{
-    top: 8.8em;
-}
-li.active:nth-child(4) ~ .job-list-scroll{
-    top: 12.12em;
+    top: 116px;
 }
 
 .jobs-info{
@@ -507,9 +513,8 @@ li.active:nth-child(4) ~ .job-list-scroll{
 .jobs-info-content {
     /*
     padding: 1.2rem 1rem 2.8rem 2.8rem;
-    
-    backdrop-filter: blur(8px);
     border: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
     */
     border-radius: 8px;
 }
@@ -534,19 +539,79 @@ li.active:nth-child(4) ~ .job-list-scroll{
     flex-direction: column;
     align-items: center;
 }
+
+.proyect > h2{
+    width: 100%;
+    margin: 0;
+    font-size: var(--font-lg);
+    color: var(--light-color);
+    text-align: center;
+    margin-bottom: 1.8em;
+}
+
 .proyect-content{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 80%;
-    overflow: hidden;
+    width: 80%;
+    height: 50%;
 }
+
+.proyect-img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 4px;
+}
+.proyect-img > img{
+    object-fit: fill;
+    width: 100%;
+    filter:brightness(.6);
+    transition: .2s ease-in-out;
+}
+.proyect-info{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(80% - 5em);
+    height: calc(100% - 5em);
+    margin: 0;
+    padding: 0em 0em 0em 3em;
+}
+.proyect-info > h2{
+    color: var(--light-color);
+    font-size: calc(var(--font-md) + .4em);
+    width: 100%;
+    margin: 0;
+}
+.proyect-info-tech{
+    width: 100%;
+    margin: 0;
+    gap: .4em;
+}
+.proyect-info-link{
+    bottom: 0;
+    margin-top:  1em;
+    width: 10%;
+    display: flex;
+    align-items: flex-end;
+    transition: .1s ease-in-out;
+}
+.proyect-info-link > svg{
+    font-size: 2em;
+    color: var(--text-color);
+}
+.proyect-info-link:hover > svg{
+    color: var(--primary-color);
+}
+/*
 .proyect-img{
     position: relative;
     left: 20px;
-    width: 50vw;
+    width: 50%;
     height: 60vh;
     overflow: hidden;
     border-radius: 8px;
@@ -575,6 +640,8 @@ li.active:nth-child(4) ~ .job-list-scroll{
     color: var(--secondary-color);
     font-size: var(--font-md);
 }
+
+*/
 
 
 /*---------------------------others Proyect-----------------------------*/
@@ -643,8 +710,11 @@ li.active:nth-child(4) ~ .job-list-scroll{
     width: 110%;
     height: 110%;
     color: var(--text-color);
+    transition: .1s ease-in-out;
  }
- 
+.others-content-card-text > a:hover > svg{
+    color: var(--primary-color);
+}
 
 .others-content-item-tech{
     display: flex;
@@ -682,7 +752,7 @@ li.active:nth-child(4) ~ .job-list-scroll{
     flex-wrap: wrap;
     margin: 1px solid red;  
     width: 70%;
-    max-width: 600px;
+    max-width: 760px;
 }
 .contact-form-title{
     width: 100%;
@@ -806,7 +876,7 @@ li.active:nth-child(4) ~ .job-list-scroll{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 9vh;
+    height: 8.5vh;
     color: var(--dark-text-color);
 }
 
@@ -873,6 +943,103 @@ body::-webkit-scrollbar-thumb {
         left: 10%;
         width: 90%;
     }
+
+    .section-head{
+        justify-content: center;
+    }
+    /*landing*/
+    .landing-content{
+        width: 100%;
+    }
+    .landing-box{
+        flex-wrap: wrap;
+    }
+    .about-content{
+        left: 10%;
+        width: 90%;
+    }
+    .side-text{
+        display: none;
+    }
+    /*about*/
+    .about-content{
+        left: 0;
+        width: 100%;
+        padding: 1em;
+        border-radius: 4px;
+    }
+    /*experience*/
+    .experience{
+        flex-direction: row;
+    }
+    .experience-content{
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        height: 80%;
+        width: 90%;
+    }
+    .jobs{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1.2em; 
+    }
+    .jobs > ul{
+        display: flex;
+        width: 100%;
+    }
+    .job-list{
+        height: 58px;
+        width: 100%;
+        padding:0 2em;
+        color: var(--text-color);
+        cursor: pointer;
+        line-height: 58px;
+        text-align: center;
+        font-size: var(--font-sm);
+    }
+    .active{
+        color: var(--light-color);
+        transition: .4s ease-in-out;
+        background: var(--bg-color-card);
+        border-radius: 4px;
+    }
+    .job-list-scroll{
+        display: none;
+    }
+
+    /*proyect*/
+    .proyect-content{
+        width: 90%;
+        height: 80%;
+        flex-wrap: wrap;
+        border-radius: 4px ;
+        overflow: hidden;
+    }
+    .proyect-img{
+        width: 100%;
+        height: 60%;
+        border-radius: 0;
+    }
+    .proyect-info{
+        background-color: var(--bg-color-card);
+        position: relative;
+        display: block;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: calc(100% - 2.4em);
+        height: 40%;
+        margin: 0;
+        padding: 2em 1.2em 1em 1.8em;
+    }
+    /*contact*/
+    .contact-form{
+        width: 90%;
+    }
+
 }
 
 /*MOBILE*/
@@ -880,13 +1047,5 @@ body::-webkit-scrollbar-thumb {
     /* For mobile phones: */
     :root{
         --font-res: 1.54vmax;
-    }
-    .landing-content{
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .about-content{
-        left: 10%;
-        width: 90%;
     }
 }
